@@ -1,0 +1,390 @@
+html[theme="light"] {
+
+    body {
+        background: #fff;
+    }
+
+    * {
+        color: $paragraph_light;
+    }
+
+    .btn-custom-blue {
+        background: #E9EFFF;
+        color: $primary;
+    }
+
+    .btn-custom-dark {
+        background: $secondary_gray_light;
+        color: $paragraph_light;
+    }
+
+    main > section {
+        
+        header.custom {
+            &:before {
+                background: $secondary_gray_light;
+            }
+
+            h2 {
+                background: #ffffff;
+            }
+        }
+    }
+
+    #sidebar {
+        .logo img {
+            filter: invert(1);  
+        }
+
+        nav ul li {
+            a {
+                &:hover i {
+                    color: $paragraph_light;
+                }
+
+                i {
+                    color: $gray_light;
+                }
+            }
+
+            >span {
+                background: $secondary_gray_light;
+            }
+        }
+
+        .toggle-mode .outer {
+            background: $secondary_gray_light;
+
+            .inner {
+                margin-top: 5px;
+
+                &:before {
+                    background: $secondary_gray_light;
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    #home {
+        .image {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            transition: filter 0.3s;
+    
+            // animation for home page image
+    
+            .image-border {
+                display: inline-block;
+                --border-angle: 0turn; // For animation.
+                --main-bg: conic-gradient(
+                  from var(--border-angle),
+                  #fff,
+                  #fff 5%,
+                  #fff 60%,
+                  #fff 95%
+                );
+        
+                border: solid 5px transparent;
+                border-radius: 0.8em;
+                --gradient-border: conic-gradient(
+                  from var(--border-angle),
+                  transparent 25%,
+                  #000,
+                  #000 99%,
+                  transparent
+                );
+        
+                background: var(--main-bg) padding-box,var(--gradient-border) border-box,var(--main-bg) border-box;
+        
+                background-position: center center;
+        
+                animation: bg-spin 3s linear infinite;
+        
+                @keyframes bg-spin {
+                  to {
+                    --border-angle: 1turn;
+                  }
+                }
+              }
+    
+            img {
+                border-radius: 8px;
+                max-width: 100%;
+                transition: all 0.3s;
+    
+                &:hover {
+                    filter: saturate(200%) sepia(1);
+                }
+            }
+        }
+        .info {
+            h1 span {
+                color: $gray_light;
+            }
+
+            .field h2 {
+                color: $gray_light;
+            }
+
+            .socials ul li a {
+                &:hover {
+                    background: $secondary_gray_light;
+                    
+                    i,
+                    span {
+                        color: $paragraph_light;
+                    }
+                }
+
+                i,
+                span {
+                    color: $gray_light;
+                }
+            }
+        }
+    }
+
+    #about_me {
+        .image{
+            .image-border {
+                display: inline-block;
+                --border-angle: 0turn; // For animation.
+                --main-bg: conic-gradient(
+                  from var(--border-angle),
+                  #fff,
+                  #fff 5%,
+                  #fff 0%,
+                  #fff 95%
+                );
+        
+                border: solid 5px transparent;
+                border-radius: 1em;
+                --gradient-border: conic-gradient(
+                  from var(--border-angle),
+                  transparent 25%,
+                  #000,
+                  #000 99%,
+                  transparent
+                );
+        
+                background: var(--main-bg) padding-box,var(--gradient-border) border-box,var(--main-bg) border-box;
+        
+                background-position: center center;
+        
+                animation: bg-spin 3s linear infinite;
+        
+                @keyframes bg-spin {
+                  to {
+                    --border-angle: 1turn;
+                  }
+                }
+              }
+             
+        }
+        .rate span:not(.fill) {
+            &:after,
+            &:before {
+                background: $gray_light;
+            }
+        }
+
+        .hero .info {
+            h2 {
+                color: $gray_light;
+            }
+
+            p {
+                color: $paragraph_light;
+            }
+
+            .items .item .value {
+                color: $gray_light;
+            }
+        }
+
+        .languages-skills .languages-key-skills .languages .items .item .info .level {
+            color: $gray_light;
+        }
+
+        .languages-skills .web-skills .items .item {
+            background: $secondary_gray_light;
+
+            &:after,
+            &:before {
+                background: lighten($primary, 20%);
+            }
+
+            .year {
+                color: $gray_light;
+            }
+        }
+    }
+
+    #my_resume {
+        .items .item {
+            &:hover {
+                .icon {
+                    background: lighten($primary, 25%);
+
+                    &:before {
+                        background: lighten($primary, 25%);
+                    }
+                }
+
+                .box {
+                    &:before {
+                        border-right-color: lighten($primary, 25%);
+                    }
+
+                    &:after {
+                        background: lighten($primary, 25%);
+                    }
+                }
+            }
+
+            .icon {
+                background: $secondary_gray_light;
+
+                &:before {
+                    background: darken($secondary_gray_light, 5%);
+                }
+            }
+
+            .box {
+                background: rgba($secondary_gray_light, 0.8);
+
+                &:before {
+                    border-right-color: rgba($secondary_gray_light, 0.8);
+                }
+
+                p {
+                    color: $gray_light;
+                }
+            }
+        }
+    }
+
+    #my_work {
+        .filters {
+            button {
+                &.active {
+                    background: $secondary_gray_light;
+
+                    h4 {
+                        color: $paragraph_light;
+                    }
+                }
+
+                h4 {
+                    color: $gray_light;
+                }
+            }
+        }
+
+        .work-items .item .wrap:after {
+            background: rgba(#fff, 0.8);
+        }
+    }
+
+    .modal#workModal {
+        .modal-dialog .modal-content {
+            background: #fff;
+
+            .modal-body {
+                .modal-close-button {
+                    background: $secondary_gray_light;
+
+                    &:hover {
+                        background: $primary;
+
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .left p {
+                    color: $gray_light;
+                }
+
+                .right .value {
+                    color: $gray_light;
+                }
+            }
+        }
+    }
+
+    #testimonial {
+        .main-section .comments .item .box {
+            background: rgba($secondary_gray_light, 0.8);
+
+            &:before {
+                border-bottom-color: rgba($secondary_gray_light, 0.8);
+            }
+        }
+
+        .writer span.field {
+            color: $gray_light !important;
+        }
+    }
+
+    #contact_me {
+        .container {
+            .form {
+                .form-item {
+                    &:before {
+                        background: $secondary_gray_light;
+                    }
+
+                    &:after {
+                        background: $primary;
+                    }
+
+                    label {
+                        color: $gray_light;
+                    }
+                }
+            }
+
+            .info {
+                .item {
+                    &:hover {
+                        i {
+                            background: $primary;
+                            color: #fff;
+                        }
+                    }
+
+                    i {
+                        background: $secondary_gray_light;
+                    }
+
+                    .text {
+                        .title {
+                            color: $gray_light;
+                        }
+
+                        a {
+                            color: $paragraph_light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    html[theme="light"] {
+        #sidebar {
+            background: lighten($primary, 25%);
+
+            .toggle-sidebar {
+                background: lighten($primary, 25%);
+            }
+        }
+    }
+}
